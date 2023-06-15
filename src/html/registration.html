@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Registration Form</title>
+    <link href="../css/registration.css" rel="stylesheet">
+  </head>
+  <body background="../img/background7.jpg">
+    <h1><u>Registration</u></h1><br>
+    <form name="Registration">
+      <table name="table">
+      <tr><td>First name: </td><td><input type="text" size="30" name="fname" id="fname" placeholder="Enter first name" required></td></tr>
+      <tr><td>Last name: </td><td><input type="text" size="30" name="lname" id="lname" placeholder="Enter last name" required></td></tr>
+      <tr><td>Create Password: </td><td><input type="password" size="30" name="password" id="password" placeholder="Enter password" required></td></tr>
+      <tr><td>Re-enter Password: </td><td><input type="password" size="30" name="repassword" id="repassword" placeholder="Enter the same password" required></td></tr>
+      <tr><td>Jntu No.: </td><td><input type="text" size="30" name="jntuno" id="jntuno" placeholder="Enter jntu no." required></td></tr>
+      <tr><td>Gender: </td><td><input type="radio" name="gender" value="male" required>Male
+      <input type="radio" name="gender" value="female">Female
+      <input type="radio" name="gender" value="others">Others</td></tr>
+      <tr><td>Mail Id: </td><td><input type="text" name="mailid" id="mailid" placeholder="Enter mail id" required></td></tr>
+      <tr><td>Mobile No.: </td><td><input type="text" name="mbno" id="mbno" placeholder="Enter mobile number" required><span id="check" style="font-size: small; color: red;"></span></td></tr>
+      <tr><td id="reg"><input type="submit" value="Register" onclick="validation();"></td>
+      <td><input type="reset" value="Reset"></td></tr>
+      </table>
+    </form>
+  </body>
+  <script>
+    function validation()
+    {
+      fn = /^[A-Za-z]+$/;
+      ln = /^[A-Za-z]+$/;
+      cp = /^[A-Za-z0-9!@#$%^&*()_]{6,20}$/;
+      jn = /^[1][9][3][4][1][Aa][0][5][A-Za-z0-9][0-9]$/;
+      mi = /^[A-Za-z0-9]+\@[a-zA-Z.][a-zA-Z]+$/;
+      mn = /^[0-9]{10}$/;
+
+      t1 = document.getElementById("fname").value;
+      t2 = document.getElementById("lname").value;
+      t3 = document.getElementById("password").value;
+      t4 = document.getElementById("repassword").value;
+      t5 = document.getElementById("jntuno").value;
+      t6 = document.getElementById("mailid").value;
+      t7 = document.getElementById("mbno").value;
+      if(!fn.test(t1))
+      {
+        window.alert("Invalid first name");
+      }
+      if(!ln.test(t2))
+      {
+        window.alert("Invalid last name");
+      }
+      if(!cp.test(t3))
+      {
+        window.alert("Invalid Password");
+      }
+      if(t3 != t4)
+      {
+        window.alert("Both passwords must be same");
+      }
+      if(!jn.test(t5))
+      {
+        window.alert("Invalid Jntu no.");
+      }
+      if(!mi.test(t6))
+      {
+        window.alert("Invalid mail id");
+      }
+      if(!mn.test(t7))
+      {
+        window.alert("Invalid Mobile number");
+        document.getElementById("check").innerHTML = "* mobile number should be 10 digits";
+      }
+    }
+  </script>
+</html>

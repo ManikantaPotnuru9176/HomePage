@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Student personal info</title>
+          <style>
+            table{height: 100%;
+                  border: 2px solid rgb(28, 169, 212);
+                  background-color: aqua;}
+                  td{padding-left: 50;}
+          </style>
+    </head>
+    <body background="../img/std_per_inf background.jpg">
+        <form>
+            <table align="center">
+                <tr><td colspan="2"><h1><u>Student Personal Info</u></h1></td></tr>
+                <tr><td>Name: </td><td><input type="text" name="fname" id="fname" placeholder="First name"> <br><br>
+                              <input type="text" name="lname" id="lname" placeholder="Last name(Surname)"></td></tr>
+                <tr><td>Jntu no: </td><td><input type="text" name="jntu_no" id="jntu_no"></td></tr>
+                <tr><td>Father name: </td><td><input type="text" name="fa_name" id="fa_name"></td></tr>
+                <tr><td>Mother name: </td><td><input type="text" name="mo_name" id="mo_name"></td></tr>
+                <tr><td>DOB: </td><td><input type="date" name="dob" id="dob"></td></tr>
+                <tr><td>Gender: </td><td><input type="radio" name="gender" id="male"> Male 
+                                <input type="radio" name="gender" id="female"> Female</td></tr>
+                <tr><td>E-mail ID: </td><td><input type="text" name="mail_id" id="mail_id"></td></tr>
+                <tr><td>Telephone no: </td><td><input type="text" name="tele_no" id="tele_no"></td></tr>
+                <tr><td>Mobile no: </td><td><input type="text" name="mobi_no" id="mobi_no"></td></tr>
+                <tr><td>Temporary address: </td><td><textarea name="temp_address" id="temp_address" cols="30" rows="5"></textarea></td></tr>
+                <tr><td>Permanent address: </td><td><textarea name="perm_address" id="perm_address" cols="30" rows="5"></textarea></td></tr>
+                <tr><td>Hobbies: </td><td><input type="checkbox" name="drawing" id="draw"> Drawing 
+                                          <input type="checkbox" name="singing" id="sing"> Singing
+                                          <input type="checkbox" name="dancing" id="dance"> Dancing <br>
+                                          <input type="checkbox" name="others" id="other"> Others
+                                          <input type="text" name="oth" id="oth"></td></tr>
+                <tr><td>Languages known: </td><td><input type="checkbox" name="telugu" value="telugu" id="tel"> Telugu
+                                                  <input type="checkbox" name="hindi" value="hindi" id="hin"> Hindi
+                                                  <input type="checkbox" name="english" value="english" id="eng"> English <br>
+                                                  <input type="checkbox" name="other" id="other"> Others
+                                                  <input type="text" name="lan_oth" id="lan_oth"></td></tr>
+                <tr><td><input type="submit" value="Submit"></td><td><input type="reset" value="Reset"></td></tr>
+            </table>
+        </form>
+    </body>
+</html>

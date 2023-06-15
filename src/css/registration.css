@@ -1,0 +1,12 @@
+h1{color:gray;
+   text-align: center;
+   font-family: 'Times New Roman', Times, serif;}
+table{color:slategray;
+      padding-left: 500;
+      height: 80%;
+      font-weight: 1000;
+      font-family:sans-serif;}
+td{padding-left: 50;}
+p{font-size:small;
+  color: white;}
+#reg{text-align: right;}
